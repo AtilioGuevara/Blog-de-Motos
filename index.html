@@ -8,31 +8,29 @@
 </head>
 <body>
     <header>
-        <h1>Agregar Tema</h1>
+        <h1>Blog de Motocicletas</h1>
         <nav>
-            <a href="mainpage.html">Ir al Blog</a>
+            <a href="mainpage.html">Ir a la Página Principal</a>
         </nav>
     </header>
 
-    <main>
-        <section id="new-post">
-            <h2>Agregar nueva entrada</h2>
-            <form id="post-form">
-                <label for="titulo">Título</label>
-                <input type="text" id="title" required><br>
-                <label for="contenido">Contenido</label>
-                <textarea id="contenido" rows="5" required></textarea><br>
-                <button type="submit">Agregar entrada</button>
-            </form>
-        </section>
+    <section class="form-section">
+        <h2>Agregar Nueva Publicación</h2>
+        <form id="post-form">
+            <input type="text" id="post-titulo" placeholder="Título" required>
+            <textarea id="post-contenido" placeholder="Contenido" required></textarea>
+            <button type="submit">Agregar Publicación</button>
+        </form>
+    </section>
 
-        <hr>
+    <section class="latest-posts">
+        <h2>Últimas Entradas</h2>
+        <ul id="post-list"></ul>
+    </section>
 
-        <section id="posts">
-            <h2>Entradas del blog</h2>
-            <ul id="post-list"></ul>
-        </section>
-    </main>
+    <footer>
+        <p>© 2024 Blog de Motocicletas. Todos los derechos reservados.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
