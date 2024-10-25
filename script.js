@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', loadPosts);
 postForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const title = document.getElementById('title').value;
-    const content = document.getElementById('content').value;
+    const titulo = document.getElementById('titulo').value;
+    const contenido = document.getElementById('contenido').value;
 
     const post = {
-        title,
-        content
+        titulo,
+        contenido
     };
 
     savePost(post);
@@ -39,8 +39,8 @@ function loadPosts() {
     posts.forEach((post, index) => {
         const postElement = document.createElement('li');
         postElement.innerHTML = `
-            <h3>${post.title}</h3>
-            <p>${post.content}</p>
+            <h3>${post.titulo}</h3>
+            <p>${post.contenido}</p>
             <button onclick="deletePost(${index})">Eliminar</button>
         `;
         postList.appendChild(postElement);
@@ -53,3 +53,31 @@ function deletePost(index) {
     localStorage.setItem('posts', JSON.stringify(posts));
     loadPosts();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.getElementById('post-list')) {
+        loadPosts();
+    }
+});
+
+function loadPosts() {
+    const posts = getPosts();
+    const postList = document.getElementById('post-list');
+    if (postList) {
+        postList.innerHTML = '';
+        posts.forEach((post, index) => {
+            const postElement = document.createElement('li');
+            postElement.innerHTML = `
+                <h3>${post.title}</h3>
+                <p>${post.content}</p>
+            `;
+            postList.appendChild(postElement);
+        });
+    }
+}
+
+function getPosts() {
+    const posts = localStorage.getItem('posts');
+    return posts ? JSON.parse(posts) : [];
+}
+
