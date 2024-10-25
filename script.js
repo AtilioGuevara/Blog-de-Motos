@@ -68,8 +68,8 @@ function loadPosts() {
         posts.forEach((post, index) => {
             const postElement = document.createElement('li');
             postElement.innerHTML = `
-                <h3>${post.title}</h3>
-                <p>${post.content}</p>
+                <h3>${post.titulo}</h3>
+                <p>${post.contenido}</p>
             `;
             postList.appendChild(postElement);
         });
