@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Blog</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Motorcycle Blog</h1>
+    </header>
+
+    <main>
+        <section id="new-post">
+            <h2>Agregar nueva entrada</h2>
+            <form id="post-form">
+                <label for="title">Título</label>
+                <input type="text" id="title" required><br>
+                <label for="content">Contenido</label>
+                <textarea id="content" rows="5" required></textarea><br>
+                <button type="submit">Agregar entrada</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="posts">
+            <h2>Entradas del blog</h2>
+            <ul id="post-list"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
