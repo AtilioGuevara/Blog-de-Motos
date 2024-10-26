@@ -7,38 +7,42 @@ body {
 
 header {
     background-color: #333;
-    color: #fff;
-    padding: 20px;
+    color: white;
+    padding: 15px 20px;
     text-align: center;
 }
 
-main {
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.form-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
     margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     color: #333;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input, textarea {
+input[type="text"], textarea, input[type="file"] {
+    width: calc(100% - 20px);
     padding: 10px;
-    border: 1px solid #ccc;
+    margin: 10px 0;
     border-radius: 4px;
-    font-size: 16px;
-    width: 100%;
+    border: 1px solid #ccc;
 }
 
 button {
-    padding: 10px;
     background-color: #28a745;
     color: white;
     border: none;
+    padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -47,23 +51,27 @@ button:hover {
     background-color: #218838;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.latest-posts {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-li {
-    background-color: white;
-    margin: 10px 0;
+.motorcycle-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
     padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-li h3 {
-    margin: 0;
-}
-
-li p {
-    margin: 10px 0 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
